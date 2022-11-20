@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import 'react-loading-skeleton/dist/skeleton.css';
+import { Container } from 'react-bootstrap';
+import { Route, Routes } from 'react-router-dom';
+import { DataTable } from './pages/DataTable';
+import { Error } from './components/Error';
+import { DataAdd } from './pages/DataAdd';
+import { DataEdit } from './pages/DataEdit';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Routes>
+        <Route path="/" element={<DataTable />} />
+        <Route path="/add-data" element={<DataAdd />} />
+        <Route path="edit-data/:id" element={<DataEdit />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </Container>
   );
 }
 
