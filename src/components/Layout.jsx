@@ -10,11 +10,9 @@ export function Layout({ title, children }) {
       <div className="py-4 border-bottom d-flex justify-content-between align-items-center">
         <h1>{title}</h1>
         {location.pathname === '/' ? (
-          <Button className="py-2">
-            <Link className="text-decoration-none text-light" to="/add-data">
-              Add New Data
-            </Link>
-          </Button>
+          <Link to="/add-data">
+            <Button className="py-2">Add New Data</Button>
+          </Link>
         ) : (
           <div className="backHome">
             <Link className="text-decoration-none" to="/">
