@@ -47,7 +47,7 @@ export function Home() {
       cell: (row) => (
         <div className="d-flex">
           <button
-            className="btn btn-warning text-light d-flex align-items-center me-3 p-2"
+            className="btn btn-primary d-flex align-items-center me-3 p-2"
             onClick={() => {
               setShow(true);
               setId(row.id);
@@ -56,7 +56,7 @@ export function Home() {
             <HiOutlineEye />
           </button>
           <Link to={'/edit-data/' + row.id}>
-            <button className="btn btn-primary d-flex align-items-center me-3 p-2">
+            <button className="btn btn-warning text-light d-flex align-items-center me-3 p-2">
               <FiEdit2 />
             </button>
           </Link>
