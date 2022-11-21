@@ -26,7 +26,7 @@ export function ModalTable(props) {
           pada menu action.
         </p>
         {isLoading && <Skeleton count={2} />}
-        {data?.data?.map((item, index) => (
+        {data?.data?.map((item) => (
           <div key={item.id}>
             <p>ID Provinsi : {item.id}</p>
             <p>Nama Provinsi : {item.name}</p>

@@ -64,7 +64,7 @@ export function DataTable() {
                       </Button>
                     </Link>
                     <Button
-                      className="bg-danger border-danger d-flex align-items-center me-3 p-2"
+                      className="bg-danger border-danger d-flex align-items-center p-2"
                       onClick={() => deleteData(item.id)}
                     >
                       <AiOutlineDelete />

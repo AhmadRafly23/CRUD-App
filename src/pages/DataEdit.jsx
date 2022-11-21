@@ -34,6 +34,8 @@ export function DataEdit() {
       .then(() => {
         setLoading(false);
         Alert('Good Job', 'Data has been edited', 'success');
+        setId('');
+        setName('');
         setTimeout(() => navigate('/'), 3000);
       })
       .catch((error) => {
