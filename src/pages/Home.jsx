@@ -101,6 +101,8 @@ export function Home() {
       });
   }
 
+  console.log(process.env.REACT_APP_API_URL);
+
   return (
     <Layout title="Data Table">
       <ModalTable show={show} id={id} onHide={() => setShow(false)} />
